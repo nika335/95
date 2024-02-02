@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Detals</title>
+</head>
+<body>
+    <ul>
+        <h1>{{ note.title }}</h1>
+        <li><p>{{ note.content }}</p></li>
+        <li><p>{{ note.date_created }}</p></li>
+    </ul>
+    <a href="{% url 'index.html' %}"> main page</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Notes</title>
+</head>
+<body>
+    <h1>Simple Notes</h1>
+    <ul>
+        {% for i in note %}
+            <li>
+                <h2><a href="{% url 'note' i.title %}">{{ i.title }}</a></h2>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <form method="post">
+        {% csrf_token %}
+        <label for="x">Enter note to delete: </label>
+        <input type="text" name=note id="note">
+        <input type="submit"value="Delete">
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add new note</h1>
+    <form method="post">
+        {% csrf_token %}
+        <ul>
+            <label for="title">title</label>
+            <li><input type="text" name="title"></li>
+            <br>
+            <label for="title">content</label>
+            <li><input type="text" name="content"></li>
+            <br>
+            <label for="title">date_created</label>
+            <li><input type="text" name="date_created"></li>
+            <br>
+            <input type="submit" value="add note">
+        </ul>
+    </form>
+</body>
+</html>
